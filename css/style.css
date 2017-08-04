@@ -1,14 +1,18 @@
+/* ======== Cores */
+/* ======== Font */
+/* ======== Outros */
+/* ======== Background Color Opacity */
+/* ======== Columns */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 .swiper-container {
   width: auto;
-  height: 600px; }
+  height: 100vh; }
   .swiper-container .swiper-wrapper .swiper-slide {
     background-image: url("../images/cozinha.jpg");
     background-repeat: no-repeat;
     background-size: cover; }
     .swiper-container .swiper-wrapper .swiper-slide .texto_slide {
       margin-top: 190px;
-      font-family: 'Roboto', sans-serif;
       color: #ffffff;
       font-size: 25px;
       text-align: center;
@@ -24,7 +28,6 @@
       border: solid 1px #ffffff; }
       .swiper-container .swiper-wrapper .swiper-slide .botao a {
         text-decoration: none;
-        font-family: 'Roboto', sans-serif;
         color: #ffffff;
         font-size: 20px;
         text-align: center;
@@ -62,16 +65,52 @@
     margin-bottom: 70px; }
 
 .servicos-item {
-  width: 350px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   min-height: 226px;
-  border: solid 1px #d7d7d7; }
+  border: solid 1px #d7d7d7;
+  margin-bottom: 22px; }
+  @media (min-width: 992px) {
+    .servicos-item {
+      float: left;
+      width: 33.33333%; } }
+  @media (min-width: 768px) {
+    .servicos-item {
+      float: left;
+      width: 33.33333%; } }
   .servicos-item img {
-    display: block; }
-  .servicos-item span {
+    margin-top: 70px;
+    margin-bottom: 20px; }
+  .servicos-item h3 {
     color: #aaaaaa;
     font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
+  .servicos-item:hover {
+    background-color: #19036d;
+    background-image: -webkit-gradient(linear, -45deg, from(#0e023e), to(#19036d));
+    background-image: -webkit-linear-gradient(-45deg, #0e023e, #19036d);
+    background-image: -moz-linear-gradient(-45deg, #0e023e, #19036d);
+    background-image: -ms-linear-gradient(-45deg, #0e023e, #19036d);
+    background-image: -o-linear-gradient(-45deg, #0e023e, #19036d);
+    background-image: linear-gradient(-45deg, #0e023e, #19036d);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#0e023e', EndColorStr='#19036d'); }
+    .servicos-item:hover img {
+      display: none; }
+    .servicos-item:hover h3 {
+      color: #ffffff; }
 
 .content {
   margin-left: -15px;
@@ -83,7 +122,6 @@
     clear: both; }
 
 .titulo {
-  font-family: 'Roboto', sans-serif;
   font-size: 40px !important;
   font-weight: bold;
   text-align: center;
@@ -100,7 +138,6 @@
 
 .paragrafo {
   margin-top: 23px;
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   color: #aaaaaa;
   text-align: center;
@@ -115,3 +152,6 @@
     .paragrafo {
       float: left;
       width: 66.66667%; } }
+
+body {
+  font-family: 'Roboto', sans-serif; }

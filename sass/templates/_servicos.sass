@@ -4,13 +4,24 @@
         margin-bottom: 70px
 
 .servicos-item
-    width: 350px
+    //+make-md-column-offset(1)
+    +make-md-column(4)
+    +make-sm-column(4)
+    +make-xs-column(12)
     min-height: 226px
     border: solid 1px #d7d7d7
+    margin-bottom: 22px
     img
-        display: block
-    span
+        margin-top: 70px
+        margin-bottom: 20px
+    h3
         color: #aaaaaa
         font-size: 20px
-        font-family: 'Roboto', sans-serif
         text-transform: uppercase
+        text-align: center
+    &:hover
+        +gradient(-45deg, #0e023e, #19036d)
+        img
+            display: none
+        h3
+            color: #ffffff
