@@ -8,7 +8,7 @@
     +make-md-column(4)
     +make-sm-column(4)
     +make-xs-column(12)
-    min-height: 226px
+    min-height: 250px
     border: solid 1px #d7d7d7
     margin-bottom: 22px
     img
@@ -19,9 +19,28 @@
         font-size: 20px
         text-transform: uppercase
         text-align: center
+    p
+        display: none
+        text-align: center
+        color: #ffffff
     &:hover
         +gradient(-45deg, #0e023e, #19036d)
+        border: solid 1px #0e023e
         img
-            display: none
+            margin-top: 40px
+        #man-c
+            content: url('../images/manutencao-c-hover.png')
+        #man-p
+            content: url('../images/manutencao-p-hover.png')
+        #vas
+            content: url('../images/vassoura-hover.png')
+        #man
+            content: url('../images/manutencao-hover.png')
+        #cons
+            content: url('../images/manutencao-p-hover.png')
+        #exau
+            content: url('../images/exaustor-hover.png')
         h3
             color: #ffffff
+        p
+            display: block

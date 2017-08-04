@@ -79,7 +79,7 @@
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 226px;
+  min-height: 250px;
   border: solid 1px #d7d7d7;
   margin-bottom: 22px; }
   @media (min-width: 992px) {
@@ -98,6 +98,10 @@
     font-size: 20px;
     text-transform: uppercase;
     text-align: center; }
+  .servicos-item p {
+    display: none;
+    text-align: center;
+    color: #ffffff; }
   .servicos-item:hover {
     background-color: #19036d;
     background-image: -webkit-gradient(linear, -45deg, from(#0e023e), to(#19036d));
@@ -106,11 +110,26 @@
     background-image: -ms-linear-gradient(-45deg, #0e023e, #19036d);
     background-image: -o-linear-gradient(-45deg, #0e023e, #19036d);
     background-image: linear-gradient(-45deg, #0e023e, #19036d);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#0e023e', EndColorStr='#19036d'); }
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#0e023e', EndColorStr='#19036d');
+    border: solid 1px #0e023e; }
     .servicos-item:hover img {
-      display: none; }
+      margin-top: 40px; }
+    .servicos-item:hover #man-c {
+      content: url("../images/manutencao-c-hover.png"); }
+    .servicos-item:hover #man-p {
+      content: url("../images/manutencao-p-hover.png"); }
+    .servicos-item:hover #vas {
+      content: url("../images/vassoura-hover.png"); }
+    .servicos-item:hover #man {
+      content: url("../images/manutencao-hover.png"); }
+    .servicos-item:hover #cons {
+      content: url("../images/manutencao-p-hover.png"); }
+    .servicos-item:hover #exau {
+      content: url("../images/exaustor-hover.png"); }
     .servicos-item:hover h3 {
       color: #ffffff; }
+    .servicos-item:hover p {
+      display: block; }
 
 .content {
   margin-left: -15px;
