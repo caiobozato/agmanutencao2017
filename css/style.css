@@ -3,7 +3,7 @@
 /* ======== Outros */
 /* ======== Background Color Opacity */
 /* ======== Columns */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
 .swiper-container {
   width: auto;
   height: 100vh; }
@@ -17,9 +17,10 @@
       font-size: 25px;
       text-align: center;
       text-transform: uppercase;
-      letter-spacing: 5px; }
+      letter-spacing: 5px;
+      font-weight: 400; }
       .swiper-container .swiper-wrapper .swiper-slide .texto_slide h1 {
-        font-weight: bold;
+        font-weight: 700;
         margin: 20px 0 25px 0; }
     .swiper-container .swiper-wrapper .swiper-slide .botao {
       display: table;
@@ -66,27 +67,27 @@
 
 .servicos-item {
   position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
   float: left;
   width: 100%;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  min-height: 250px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 250px;
   border: solid 1px #d7d7d7;
   margin-bottom: 22px; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .servicos-item {
       float: left;
       width: 33.33333%; } }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .servicos-item {
       float: left;
       width: 33.33333%; } }
@@ -96,24 +97,25 @@
   .servicos-item h3 {
     color: #aaaaaa;
     font-size: 20px;
+    font-weight: 700;
     text-transform: uppercase;
     text-align: center; }
   .servicos-item p {
     display: none;
     text-align: center;
+    font-weight: 300;
     color: #ffffff; }
   .servicos-item:hover {
-    background-color: #19036d;
-    background-image: -webkit-gradient(linear, -45deg, from(#0e023e), to(#19036d));
-    background-image: -webkit-linear-gradient(-45deg, #0e023e, #19036d);
-    background-image: -moz-linear-gradient(-45deg, #0e023e, #19036d);
-    background-image: -ms-linear-gradient(-45deg, #0e023e, #19036d);
-    background-image: -o-linear-gradient(-45deg, #0e023e, #19036d);
-    background-image: linear-gradient(-45deg, #0e023e, #19036d);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#0e023e', EndColorStr='#19036d');
-    border: solid 1px #0e023e; }
+    background-image: url("../images/servicos_hover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    border: solid 1px #0e023e;
+    transition: background 0.6s;
+    cursor: pointer; }
     .servicos-item:hover img {
-      margin-top: 40px; }
+      margin-top: 40px;
+      transition: 0.5s linear; }
     .servicos-item:hover #man-c {
       content: url("../images/manutencao-c-hover.png"); }
     .servicos-item:hover #man-p {
@@ -152,12 +154,13 @@
 .barra {
   display: table;
   margin: 0 auto;
-  border: solid 3px #c80505;
+  border: solid 2px #c80505;
   width: 110px; }
 
 .paragrafo {
   margin-top: 23px;
   font-size: 20px;
+  font-weight: 400;
   color: #aaaaaa;
   text-align: center;
   position: relative;
@@ -172,5 +175,50 @@
       float: left;
       width: 66.66667%; } }
 
+#sobre {
+  margin-top: 60px;
+  background-color: #fafafa;
+  background-size: cover;
+  width: 100vw; }
+  #sobre h2 {
+    margin-top: 70px; }
+  #sobre .mini-texto {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    color: #aaaaaa;
+    margin: 20px 0 55px 0; }
+  #sobre .item-sobre {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    height: 100%;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 992px) {
+      #sobre .item-sobre {
+        float: left;
+        width: 33.33333%; } }
+    #sobre .item-sobre h3 {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 55px 0 25px 0; }
+    #sobre .item-sobre p {
+      text-align: center;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 300;
+      margin: 27px 60px 0 60px; }
+  #sobre #missao {
+    background-image: url("../images/missao.jpg"); }
+  #sobre #visao {
+    background-image: url("../images/visao.jpg"); }
+  #sobre #valores {
+    background-image: url("../images/valores.jpg"); }
+
 body {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif !important; }
