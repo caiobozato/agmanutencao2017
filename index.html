@@ -15,11 +15,11 @@
         <header>
             <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
             <!-- Slider main container -->
-            <div class="swiper-container">
+            <div class="swiper-container" id="slide_container_topo">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="slide-topo">
                         <div class="texto_slide">
                             a AG está sempre preparada para oferecer uma <h1>solução inteligente e econômica</h1> para sua empresa.
                         </div>
@@ -28,7 +28,7 @@
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="slide-topo2">
                         <div class="texto_slide">
                             a AG está sempre preparada para oferecer uma <h1>solução inteligente e econômica</h1> para sua empresa.
                         </div>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
 
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="slide-topo3">
                         <div class="texto_slide">
                             a AG está sempre preparada para oferecer uma <h1>solução inteligente e econômica</h1> para sua empresa.
                         </div>
@@ -176,8 +176,8 @@ dolore magna aliqua.</p>
                 </div>
             </div>
         </section>
-        <section>
-            <div class="container" id="produtos">
+        <section id="produtos">
+            <div class="container">
                 <div class="content">
                     <h2 class="titulo">Nossos produtos</h2>
                     <span class="barra"></span>
@@ -186,6 +186,50 @@ representantes de vendas autorizadas, oferecemos produtos em
 perfeita qualidade para a sua empresa.</p>
                 </div>
             </div>
+            <div class="swiper-container" id="slide_container_produtos">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="slide_prod_1">
+                        <img src="images/liquidificador-industrial.png" alt="Liquidificador Industrail Skymsen"/>
+                            
+                        <img src="images/centrifuga-de-sucos.png" alt="Centrifuga de Sucos"/>
+                            
+                        <img src="images/descascador-de-batata-industrial.png" alt="Descascador de Batata Industrial"/>
+                    </div>
+                </div>
+                
+                <div class="swiper-pagination" id="pag_prod"></div>
+                
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next"></div>
+                
+            </div>
+        </section>
+        <section class="clientes">
+            <div class="container">
+                <div class="content">
+                    <h2 class="titulo">Clientes</h2>
+                    <span class="barra"></span>
+                </div>
+            </div>
+            <div class="swiper-container" id="slide_container_clientes">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="slide_cli_1">
+                        <img src="images/sapore.png" alt="Sapore"/>
+                            
+                        <img src="images/sodexo.png" alt="Sodexo"/>
+                            
+                        <img src="images/hosp-santa-paula.png" alt="Hospital Santa Paula"/>
+
+                        <img src="images/novelis.png" alt="Novelis"/>
+                    </div>
+                </div>
+                
+                <div class="swiper-pagination" id="pag_prod"></div>
+                
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next"></div>
+                
+            </div>                        
         </section>
         <script>        
         var mySwiper = new Swiper ('.swiper-container', {
