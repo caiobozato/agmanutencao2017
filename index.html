@@ -7,11 +7,9 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/plugins.css">
         <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css">
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
     </head>
     <body>
-        <style>
-        
-        </style>
         <header>
             <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
             <!-- Slider main container -->
@@ -55,11 +53,12 @@
             </div>
             <div class="container">
                 <div class="content">
-                    <div class="logo-container">
-                        <img src="images/ag-logo.png" alt="Logo AG" class="logo-menu">
-                    </div>
-                    <div class="menu">
-                        <nav>
+                    <div class="col-md-12">                    
+                        <nav class ="menu" id="menuHeader">
+                            <div class="col-md-2">
+                                    <img src="images/ag-logo.png" alt="Logo AG" class="img-responsive center-block logo-menu"/>
+                            </div>
+                            
                             <ul>
                                 <li>
                                     <a href="index.html">HOME</a>
@@ -328,6 +327,19 @@ Técnico - (11) 96862-0706</p>
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
         })        
+        </script>
+        <script>
+            $(function(){   
+                var nav = $('#menuHeader');
+                var topo = $('#slide_container_topo').height();
+                $(window).scroll(function () { 
+                    if ($(this).scrollTop() > topo) { 
+                        nav.addClass("menu-fixo"); 
+                    } else { 
+                        nav.removeClass("menu-fixo"); 
+                    } 
+                });  
+            });
         </script>
     </body>
 </html>
