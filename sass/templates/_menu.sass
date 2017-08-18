@@ -1,6 +1,7 @@
 .logo-menu
     margin-top: 30px
-    width: 70%
+    width: 40%
+
 .menu
     background-color: #ffffff
     ul
@@ -12,13 +13,27 @@
             a
                 font-size: 16px
                 font-weight: bold
-                letter-spacing: 10px
+                letter-spacing: 8px
                 text-decoration: none
                 color: #aaaaaa
                 &:hover
                     color: #c80505
-    
+                    background-color: transparent
+
+.menu
+    .nav
+        .active
+            a
+                color: #c80505 !important
+                background-color: transparent !important
 .menu-fixo
+    //+make-md-column(12)
+    height: 100px
+    width: 100%
     position: fixed
     top: 0
+    left: 0
     z-index: 99
+    ul
+        float: right
+        margin: 40px 70px 0 0

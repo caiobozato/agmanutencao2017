@@ -12,6 +12,11 @@
         <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
     </head>
     <body>
+        <script>
+            function rolar_para(elemento) {
+                    $('html, body').animate({ scrollTop: $(elemento).offset().top -50}, 2000);
+                }
+        </script>
         <header id="cabecalho">
             <!-- Slider main container -->
             <div class="swiper-container" id="slide_container_topo">
@@ -60,15 +65,15 @@
                                     <img src="images/ag-logo.png" alt="Logo AG" class="img-responsive center-block logo-menu"/>
                             </div>
                             
-                            <ul>
-                                <li>
+                            <ul class="nav">
+                                <li class= "active">
                                     <a href="#" onclick="rolar_para('#cabecalho')">HOME</a>
                                 </li>
                                 <li>
                                     <a href="#" onclick="rolar_para('#servicos')">SERVIÇOS</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="rolar_para('#sobre')">A EMPRESA</a>
+                                    <a href="#" onclick="rolar_para('#teste')">A EMPRESA</a>
                                 </li>
                                 <li>
                                     <a href="#" onclick="rolar_para('#contato')">CONTATO</a>
@@ -138,8 +143,9 @@
                  </div> 
             </div>
         </section>
-        <section id="empresa">
-            <div class="container" id="sobre">
+        <section id="sobre">
+            <div id="teste"></div>
+            <div class="container">
                 <div class="content">
                     <div class="col-xs-12">
                         <h2 class="titulo">Sobre a AG</h2>
@@ -191,7 +197,7 @@ dolore magna aliqua.</p>
                         <h3>A ag manutenção possui cadastro para clientes bndes</h3>
                         <span class="barra"></span>
                         <p class="paragrafo">Para saber mais envie um e-mail ou se preferir ligue para a ag</p>
-                        <a href="#">Entrar em contato</a>
+                        <a href="#" onclick="rolar_para('#contato')">Entrar em contato</a>
                     </div>
                 </div>
             </div>
@@ -343,8 +349,8 @@ dolore magna aliqua.</p>
             //parallax: true,
             //autoHeight: true,
             
-            //pagination: '.swiper-pagination',
-            //paginationClickable: true,
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
        
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
@@ -353,20 +359,25 @@ dolore magna aliqua.</p>
         <script>
             $(function(){   
                 var nav = $('#menuHeader');
+                //var linkAtivo = $('#linkMenu')
                 var topo = $('#slide_container_topo').height();
                 $(window).scroll(function () { 
                     if ($(this).scrollTop() > topo) { 
                         nav.addClass("menu-fixo");
+                        //linkAtivo.addClass("active");
                     } else { 
                         nav.removeClass("menu-fixo"); 
                     } 
                 });  
-            });
+            }); //função para fixar o menu no topo da página
         </script>
         <script>
-            function rolar_para(elemento) {
-                 $('html, body').animate({ scrollTop: $(elemento).offset().top }, 2000);
-                }
+            $(function() {
+                $('ul.nav li').on('click', function() {
+                    $(this).parent().find('li.active').removeClass('active');
+                    $(this).addClass('active');
+                });
+            });//função para mudar a cor do link ativo
         </script>
     </body>
 </html>
