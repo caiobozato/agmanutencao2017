@@ -12,7 +12,7 @@
         <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
     </head>
     <body>
-        <header>
+        <header id="cabecalho">
             <!-- Slider main container -->
             <div class="swiper-container" id="slide_container_topo">
                 <!-- Additional required wrapper -->
@@ -62,16 +62,16 @@
                             
                             <ul>
                                 <li>
-                                    <a href="index.html">HOME</a>
+                                    <a href="#" onclick="rolar_para('#cabecalho')">HOME</a>
                                 </li>
                                 <li>
-                                    <a href="#">SERVIÇOS</a>
+                                    <a href="#" onclick="rolar_para('#servicos')">SERVIÇOS</a>
                                 </li>
                                 <li>
-                                    <a href="#">A EMPRESA</a>
+                                    <a href="#" onclick="rolar_para('#sobre')">A EMPRESA</a>
                                 </li>
                                 <li>
-                                    <a href="#">CONTATO</a>
+                                    <a href="#" onclick="rolar_para('#contato')">CONTATO</a>
                                 </li>
                             </ul>
                         </nav>
@@ -79,8 +79,8 @@
                 </div>
             </div>
         </header>
-        <section>
-            <div class="container" id="servicos">
+        <section id="servicos">
+            <div class="container">
                 <div class="content">
                     <div class="col-xs-12">
                         <h2 class="titulo">Serviços</h2>
@@ -138,7 +138,7 @@
                  </div> 
             </div>
         </section>
-        <section>
+        <section id="empresa">
             <div class="container" id="sobre">
                 <div class="content">
                     <div class="col-xs-12">
@@ -339,27 +339,34 @@ dolore magna aliqua.</p>
         var mySwiper = new Swiper ('.swiper-container', {
             direction: 'horizontal',
             loop: true,
+            effect: 'coverflow',
             //parallax: true,
+            //autoHeight: true,
             
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
+            //pagination: '.swiper-pagination',
+            //paginationClickable: true,
        
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
         })        
         </script>
         <script>
-            // $(function(){   
-            //     var nav = $('#menuHeader');
-            //     var topo = $('#slide_container_topo').height();
-            //     $(window).scroll(function () { 
-            //         if ($(this).scrollTop() > topo) { 
-            //             nav.addClass("menu-fixo");
-            //         } else { 
-            //             nav.removeClass("menu-fixo"); 
-            //         } 
-            //     });  
-            // });
+            $(function(){   
+                var nav = $('#menuHeader');
+                var topo = $('#slide_container_topo').height();
+                $(window).scroll(function () { 
+                    if ($(this).scrollTop() > topo) { 
+                        nav.addClass("menu-fixo");
+                    } else { 
+                        nav.removeClass("menu-fixo"); 
+                    } 
+                });  
+            });
+        </script>
+        <script>
+            function rolar_para(elemento) {
+                 $('html, body').animate({ scrollTop: $(elemento).offset().top }, 2000);
+                }
         </script>
     </body>
 </html>
