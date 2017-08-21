@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/responsive.css"/>
         <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css"/>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="parallax.js-1.4.2/parallax.min.js"></script>
         <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
     </head>
     <body>
@@ -67,16 +68,16 @@
                             
                             <ul class="nav">
                                 <li class= "active">
-                                    <a href="#" onclick="rolar_para('#cabecalho')">HOME</a>
+                                    <a href="javascript:void(0)" onclick="rolar_para('#cabecalho')">HOME</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="rolar_para('#servicos')">SERVIÇOS</a>
+                                    <a href="javascript:void(0)" onclick="rolar_para('#servicos')">SERVIÇOS</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="rolar_para('#teste')">A EMPRESA</a>
+                                    <a href="javascript:void(0)" onclick="rolar_para('#teste')">A EMPRESA</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="rolar_para('#contato')">CONTATO</a>
+                                    <a href="javascript:void(0)" onclick="rolar_para('#contato')">CONTATO</a>
                                 </li>
                             </ul>
                         </nav>
@@ -194,10 +195,12 @@ dolore magna aliqua.</p>
             <div class="container" id="bndes">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <h3>A ag manutenção possui cadastro para clientes bndes</h3>
-                        <span class="barra"></span>
-                        <p class="paragrafo">Para saber mais envie um e-mail ou se preferir ligue para a ag</p>
-                        <a href="#" onclick="rolar_para('#contato')">Entrar em contato</a>
+                        <div class="parallax-window" data-parallax="scroll" data-image-src="images/bndes.png">
+                            <h3>A ag manutenção possui cadastro para clientes bndes</h3>
+                            <span class="barra"></span>
+                            <p class="paragrafo">Para saber mais envie um e-mail ou se preferir ligue para a ag</p>
+                            <a href="#" onclick="rolar_para('#contato')">Entrar em contato</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -359,7 +362,6 @@ dolore magna aliqua.</p>
         <script>
             $(function(){   
                 var nav = $('#menuHeader');
-                //var linkAtivo = $('#linkMenu')
                 var topo = $('#slide_container_topo').height();
                 $(window).scroll(function () { 
                     if ($(this).scrollTop() > topo) { 
