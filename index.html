@@ -29,7 +29,7 @@
                             a AG está sempre preparada para oferecer uma <h1>solução inteligente e econômica</h1> para sua empresa.
                         </div>
                         <div class="botao">
-                            <a href="#">Entre em contato</a>
+                            <a href="javascript:void(0)" onclick="rolar_para('#contato')">Entre em contato</a>
                         </div>
                     </div>
 
@@ -229,19 +229,26 @@ dolore magna aliqua.</p>
             <div class="swiper-container" id="slide_container_produtos">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" id="slide_prod_1">
-                        <img src="images/liquidificador-industrial.png" alt="Liquidificador Industrial Skymsen"/>
-                        <span>Oie</span>
-                            
-                        <img src="images/centrifuga-de-sucos.png" alt="Centrifuga de Sucos"/>
-                            
-                        <img src="images/descascador-de-batata-industrial.png" alt="Descascador de Batata Industrial"/>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="images/liquidificador-industrial.png" alt="Liquidificador Industrial Skymsen"/>
+                                <span class="item-produto">Liquidificador Industrial</span>
+                            </div>  
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="images/centrifuga-de-sucos.png" alt="Centrifuga de Sucos"/>
+                                <span class="item-produto">Centrifuga de Sucos</span>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="images/descascador-de-batata-industrial.png" alt="Descascador de Batata Industrial"/>
+                                <span class="item-produto">Liquidificador Industrial</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="swiper-pagination" id="pag_prod"></div>
+                <div class="swiper-pagination-white swiper-pagination" id="pag_prod"></div>
                 
                 <div class="swiper-button-prev swiper-button-white"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
                 
             </div>
         </section>
@@ -267,10 +274,10 @@ dolore magna aliqua.</p>
                     </div>
                 </div>
                 
-                <div class="swiper-pagination" id="pag_prod"></div>
+                <div class="swiper-pagination swiper-pagination-white"></div>
                 
                 <div class="swiper-button-prev swiper-button-white"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
                 
             </div>                        
         </section>
@@ -358,7 +365,7 @@ dolore magna aliqua.</p>
         var mySwiper = new Swiper ('.swiper-container', {
             direction: 'horizontal',
             loop: true,
-            effect: 'coverflow',
+            effect: 'slide',
             //parallax: true,
             //autoHeight: true,
             
