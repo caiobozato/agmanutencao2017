@@ -63,7 +63,7 @@
                     <div class="col-md-12">                    
                         <nav class ="menu" id="menuHeader">
                             <div class="col-md-2">
-                                    <img src="images/ag-logo.png" alt="Logo AG" class="img-responsive center-block logo-menu"/>
+                                    <img src="images/ag-logo.png" alt="Logo AG" class="img-responsive center-block" id="logo-menu"/>
                             </div>
                             
                             <ul class="nav">
@@ -245,14 +245,14 @@ dolore magna aliqua.</p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination-white swiper-pagination" id="pag_prod"></div>
+                <div class="swiper-pagination" id="pag_prod"></div>
                 
-                <div class="swiper-button-prev swiper-button-white"></div>
-                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
                 
             </div>
         </section>
-        <section class="clientes">
+        <section id="clientes">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -264,24 +264,37 @@ dolore magna aliqua.</p>
             <div class="swiper-container" id="slide_container_clientes">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" id="slide_cli_1">
-                        <img src="images/sapore.png" alt="Sapore"/>
+                        <ul>
+                            <div class="col-md-3">
+                                <li><img class="img-responsive center-block" src="images/sapore.png" alt="Sapore" id="sapore"/>
+                                </li>
+                            </div>
                             
-                        <img src="images/sodexo.png" alt="Sodexo"/>
-                            
-                        <img src="images/hosp-santa-paula.png" alt="Hospital Santa Paula"/>
+                            <div class="col-md-3">
+                                <li><img class="img-responsive center-block" src="images/sodexo.png" alt="Sodexo" id="sodexo"/>
+                                </li>
+                            </div>
+                                    
+                            <div class="col-md-3">
+                                <li><img class="img-responsive center-block" src="images/hosp-santa-paula.png" alt="Hospital Santa Paula" id="hosp-santa-paula"/>
+                                </li>
+                            </div>
 
-                        <img src="images/novelis.png" alt="Novelis"/>
+                            <div class="col-md-3">
+                                <li><img class="img-responsive center-block" src="images/novelis.png" alt="Novelis" id="novelis"/>
+                                </li>
+                            </div>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="swiper-pagination swiper-pagination-white"></div>
+                <!-- <div class="swiper-pagination swiper-pagination-white"></div> -->
                 
-                <div class="swiper-button-prev swiper-button-white"></div>
-                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
                 
             </div>                        
         </section>
-        <br/>
         <section class="contato">
             <div class="container" id="contato">   
                 <div class="row">
@@ -383,9 +396,8 @@ dolore magna aliqua.</p>
                 $(window).scroll(function () { 
                     if ($(this).scrollTop() > topo) { 
                         nav.addClass("menu-fixo");
-                        //linkAtivo.addClass("active");
                     } else { 
-                        nav.removeClass("menu-fixo"); 
+                        nav.removeClass("menu-fixo");
                     } 
                 });  
             }); //função para fixar o menu no topo da página
