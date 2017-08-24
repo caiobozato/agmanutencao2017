@@ -53,10 +53,10 @@
                     </div>
                 </div>
                 
-                <div class="swiper-pagination swiper-pagination-white"></div>
+                <div class="swiper-pagination swiper-pagination-white" id="slide_pag_topo"></div>
                 
-                <div class="swiper-button-prev swiper-button-white"></div>
-                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white" id="slide_butprev_topo"></div>
+                <div class="swiper-button-next swiper-button-white" id="slide_butnext_topo"></div>
                 
             </div>
             <div class="container">
@@ -294,10 +294,10 @@ dolore magna aliqua.</p>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination" id="slide_pag_prod"></div>
                 
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev" id="slide_butprev_prod"></div>
+                <div class="swiper-button-next" id="slide_butnext_prod"></div>
                 
             </div>
         </section>
@@ -337,10 +337,10 @@ dolore magna aliqua.</p>
                     </div>
                 </div>
                 
-                <!-- <div class="swiper-pagination swiper-pagination-white"></div> -->
+                <div class="swiper-pagination" id="slide_pag_cli"></div>
                 
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev" id="slide_butprev_cli"></div>
+                <div class="swiper-button-next" id="slide_butnext_cli" ></div>
                 
             </div>                        
         </section>
@@ -425,31 +425,30 @@ dolore magna aliqua.</p>
         </footer>
         <script>        
         var bannerHome = new Swiper('#slide_container_topo', {
-            pagination: '.swiper-pagination',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
+            pagination: '#slide_pag_topo',
+            nextButton: '#slide_butnext_topo',
+            prevButton: '#slide_butprev_topo',
             paginationClickable: true,
             spaceBetween: 30,
             centeredSlides: true,
             autoplay: 4000,
             autoplayDisableOnInteraction: false
         });
-        var bannerProdutos = new Swiper ('#slide_container_produtos', {
-            direction: 'horizontal',
-            loop: true,        
-            pagination: '.swiper-pagination',
+        var bannerProdutos = new Swiper ('#slide_container_produtos', {               
+            pagination: '#slide_pag_prod',
+            nextButton: '#slide_butnext_prod',
+            prevButton: '#slide_butprev_prod',
             paginationClickable: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
+            loop: true,
+            direction: 'horizontal'
         });
 
-        var bannerClientes = new Swiper ('#slide_container_clientes', {
+        var bannerClientes = new Swiper ('#slide_container_clientes', {    
+            pagination: '#slide_pag_cli',
+            nextButton: '#slide_butnext_cli',
+            prevButton: '#slide_butprev_cli',
             direction: 'horizontal',
-            loop: true,        
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
+            loop: true
         });
         </script>
         <script>
