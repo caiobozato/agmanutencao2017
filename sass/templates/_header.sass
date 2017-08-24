@@ -3,7 +3,6 @@
     height: 100vh
     .swiper-wrapper
         #slide-topo, #slide-topo2, #slide-topo3
-            background-image: url("../images/cozinha.jpg")
             background-repeat: no-repeat
             background-size: cover
             //background-attachment: fixed
@@ -18,11 +17,12 @@
                 font-weight: 400
                 h1
                     font-weight: 700
-                    margin: 20px 0 25px 0
+                    margin: 20px auto 25px auto
+                
             .botao
                 clear: both
                 display: table
-                padding: 20px 15px
+                padding: 15px 15px
                 margin: 50px auto 190px auto
                 border: solid 1px #ffffff
                 a
@@ -32,6 +32,12 @@
                     font-size: 20px
                     text-align: center
                     text-transform: uppercase
+        #slide-topo
+            background-image: url("../images/slide1.jpg")
+        #slide-topo2
+            background-image: url("../images/slide2.jpg")
+        #slide-topo3
+            background-image: url("../images/slide3.jpg")
     .swiper-pagination
         margin-bottom: 50px
         margin-top: 120px
