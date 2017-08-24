@@ -61,6 +61,46 @@
             </div>
             <div class="container">
                 <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-default menu" id="menuHeader">
+                            <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" id="btnMenu">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="index.html"><img src="images/ag-logo.png" class="img-responsive center-block" alt="Logo AG" id="logo-menu"/></a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class= "active">
+                                        <a href="javascript:void(0)" onclick="rolar_para('#cabecalho')">HOME</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" onclick="rolar_para('#servicos')">SERVIÇOS</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" onclick="rolar_para('#teste')">A EMPRESA</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" onclick="rolar_para('#produtos')">PRODUTOS</a>
+                                        </li>
+                                    <li>
+                                        <a href="javascript:void(0)" onclick="rolar_para('#contato')">CONTATO</a>
+                                    </li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                            </div><!-- /.container-fluid -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- MENUUUUUUUUU -->
+            <!-- <div class="container">
+                <div class="row">
                     <div class="col-md-12">                    
                         <nav class ="menu" id="menuHeader">
                             <div class="col-md-2">
@@ -86,7 +126,8 @@
                         </nav>
                     </div>
                 </div>
-            </div>
+            </div> -->
+            <!-- MENUUUUUUU -->
         </header>
         <section id="servicos">
             <div class="container">
@@ -121,8 +162,6 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>
-                <!-- </div> -->
-                <!-- <div class="content"> -->
                     <div class="col-xs-12 col-sm-4 col-md-4">
                         <div class="servicos-item">
                             <img class="img-responsive center-block" id="man" src="images/manutencao.png" alt="Manutenção"/>
@@ -456,9 +495,9 @@ dolore magna aliqua.</p>
                 var topo = $('#slide_container_topo').height();
                 $(window).scroll(function () { 
                     if ($(this).scrollTop() > topo) { 
-                        nav.addClass("menu-fixo");
+                        nav.addClass("navbar-fixed-top");
                     } else { 
-                        nav.removeClass("menu-fixo");
+                        nav.removeClass("navbar-fixed-top");
                     } 
                 });  
             }); //função para fixar o menu no topo da página
