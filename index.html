@@ -424,19 +424,33 @@ dolore magna aliqua.</p>
             </div>
         </footer>
         <script>        
-        var mySwiper = new Swiper ('.swiper-container', {
-            direction: 'horizontal',
-            loop: true,
-            //effect: 'slide',
-            //parallax: true,
-            //autoHeight: true,
-            
+        var bannerHome = new Swiper('#slide_container_topo', {
             pagination: '.swiper-pagination',
-            paginationClickable: true,
-       
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
-        })        
+            paginationClickable: true,
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: 4000,
+            autoplayDisableOnInteraction: false
+        });
+        var bannerProdutos = new Swiper ('#slide_container_produtos', {
+            direction: 'horizontal',
+            loop: true,        
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+        });
+
+        var bannerClientes = new Swiper ('#slide_container_clientes', {
+            direction: 'horizontal',
+            loop: true,        
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+        });
         </script>
         <script>
             $(function(){   
