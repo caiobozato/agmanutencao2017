@@ -12,19 +12,12 @@
         <script src="parallax.js-1.4.2/parallax.min.js"></script>
         <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
         <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
-        <script>
-            function rolar_para(elemento) {
-                    $('html, body').animate({ scrollTop: $(elemento).offset().top -50}, 2000);
-                }
-        </script>
         <header id="cabecalho">
-            <!-- Slider main container -->
             <div class="swiper-container" id="slide_container_topo">
-                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <!-- Slides -->
                     <div class="swiper-slide" id="slide-topo">
                         <div class="texto_slide">
                             a AG está sempre preparada para oferecer uma <h1>solução inteligente e econômica</h1> para sua empresa.
@@ -92,42 +85,12 @@
                                         <a href="javascript:void(0)" onclick="rolar_para('#contato')">CONTATO</a>
                                     </li>
                                 </ul>
-                            </div><!-- /.navbar-collapse -->
-                            </div><!-- /.container-fluid -->
+                            </div>
+                            </div>
                         </nav>
                     </div>
                 </div>
             </div>
-            <!-- MENUUUUUUUUU -->
-            <!-- <div class="container">
-                <div class="row">
-                    <div class="col-md-12">                    
-                        <nav class ="menu" id="menuHeader">
-                            <div class="col-md-2">
-                                    <img src="images/ag-logo.png" alt="Logo AG" class="img-responsive center-block hidden-xs" id="logo-menu"/>
-                            </div>
-                            <ul class="nav">
-                                <li class= "active">
-                                    <a href="javascript:void(0)" onclick="rolar_para('#cabecalho')">HOME</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" onclick="rolar_para('#servicos')">SERVIÇOS</a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)" onclick="rolar_para('#teste')">A EMPRESA</a>
-                                </li>
-                                <li>
-                                        <a href="javascript:void(0)" onclick="rolar_para('#produtos')">PRODUTOS</a>
-                                    </li>
-                                <li>
-                                    <a href="javascript:void(0)" onclick="rolar_para('#contato')">CONTATO</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div> -->
-            <!-- MENUUUUUUU -->
         </header>
         <section id="servicos">
             <div class="container">
@@ -483,27 +446,6 @@
             direction: 'horizontal',
             loop: true
         });
-        </script>
-        <script>
-            $(function(){   
-                var nav = $('#menuHeader');
-                var topo = $('#slide_container_topo').height();
-                $(window).scroll(function () { 
-                    if ($(this).scrollTop() > topo) { 
-                        nav.addClass("navbar-fixed-top");
-                    } else { 
-                        nav.removeClass("navbar-fixed-top");
-                    } 
-                });  
-            }); //função para fixar o menu no topo da página
-        </script>
-        <script>
-            $(function() {
-                $('ul.nav li').on('click', function() {
-                    $(this).parent().find('li.active').removeClass('active');
-                    $(this).addClass('active');
-                });
-            });//função para mudar a cor do link ativo
         </script>
     </body>
 </html>
