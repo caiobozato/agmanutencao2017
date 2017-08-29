@@ -8,10 +8,12 @@
         <link rel="stylesheet" href="css/plugins.css"/>
         <link rel="stylesheet" href="css/responsive.css"/>
         <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css"/>
+        <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css"/>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="parallax.js-1.4.2/parallax.min.js"></script>
+        <script src="parallax/parallax.min.js"></script>
         <script src="bower_components/swiper/dist/js/swiper.min.js"></script>
         <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+        <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
         <script src="js/script.js"></script>
     </head>
     <body>
@@ -350,7 +352,7 @@
     orçamento sem compromisso.</p>
                     </div>
                     <div class="col-xs-12">
-                        <form action="" id="form_contato" method="post">
+                        <form action="http://api.agmanutencaoequipamentos.com.br/servicos/v1/contato/enviar" id="form_contato" method="post">
                             <div class="contato-nome">
                                 <input type="text" id="nome"
                                 placeholder="Nome"/>
@@ -365,7 +367,7 @@
                                 <input type="text" id="msg" placeholder="Mensagem"/>
                             </div>
                             <div class="botao">
-                                <input type="button" id="btnEnviar" value="Enviar"/>
+                                <input type="submit" id="btnEnviar" value="Enviar"/>
                             </div>
                         </form>
                     </div>
@@ -427,6 +429,7 @@
             paginationClickable: true,
             spaceBetween: 30,
             centeredSlides: true,
+            parallax: true,
             autoplay: 4000,
             autoplayDisableOnInteraction: false
         });
