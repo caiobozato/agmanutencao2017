@@ -357,10 +357,10 @@
                         <form action="http://api.agmanutencaoequipamentos.com.br/servicos/v1/contato/enviar" id="form_contato" method="post">
                             <div class="contato-nome">
                                 <input type="text" id="nome"
-                                placeholder="Nome"/>
+                                placeholder="Nome" required minlength="3"/>
                             </div>
                             <div class="contato-tel">
-                                <input type="text" id="telefone" placeholder="Telefone" class="sp_celphones"/>
+                                <input type="text" id="telefone" placeholder="Telefone" class="sp_celphones" required minlength="14"/>
                             </div>
                             <div class="contato-email">
                                 <input type="text" id="email" placeholder="E-mail" required/>

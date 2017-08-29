@@ -68,38 +68,39 @@ $(document).ready(function(){
 });
 
 /**************Validação do form ************/
-$("#form_contato").validate({
-    rules : {
-        nome:{
-            required: true,
-            minlength:3
-        },
-        telefone:{
-            required: true,
-            minlength: 13
-        },
-        email:{
-            required:true,
-            email: true
-        },
-        mensagem:{
-            required:true
-          }                                
-    },
-    messages:{
-        nome:{
-            required:"Por favor, informe seu nome",
-            minlength:"O nome deve ter pelo menos 3 caracteres"
-        },
-        telefone:{
-            required:"Por favor, informe um telefone para contato",
-            minlength: "Por favor, insira o número de telefone com DDD"
-        },
-        email:{
-            required:"É necessário informar um email válido"
-        },
-        msg:{
-            required:"A mensagem não pode ficar em branco"
-        }     
-    }
-});
+// $("#form_contato").validate({
+//     rules:{
+//         nome:{
+//             required: true,
+//             minlength:3
+//         },
+//         telefone:{
+//             required: true,
+//             minlength: 14
+//         },
+//         email:{
+//             required:true,
+//             email: true
+//         },
+//         msg:{
+//             required:true
+//         }                                
+//     },
+//     messages:{
+//         nome:{
+//             required:"Por favor, informe seu nome",
+//             minlength:"O nome deve ter pelo menos 3 caracteres"
+//         },
+//         telefone:{
+//             required:"Por favor, informe um telefone para contato",
+//             minlength: "Por favor, insira o número de telefone com DDD"
+//         },
+//         email:{
+//             required:"É necessário informar um email válido"
+//         },
+//         msg:{
+//             required:"A mensagem não pode ficar em branco"
+//         }     
+//     }
+// });
+$("#form_contato").validate();
