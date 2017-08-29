@@ -21,7 +21,7 @@ $(function() {
     });
 });//função para mudar a cor do link ativo
 
-//******************Enviar email**********************//
+/*****************Enviar email**********************/
 
 $(document).ready(function(){
     $("#form_contato").submit(function(event){
@@ -48,11 +48,12 @@ $(document).ready(function(){
         // Put the results in a div
         posting.done(function(data){
             swal('Mensagem enviada com sucesso!');
+            //$('#form_contato input').val("");
         });
     });
 });
 
-//****************Máscara telefone*******************//
+/****************Máscara telefone*******************/
 $(document).ready(function(){
     var SPMaskBehavior = function (val) {
         return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
@@ -64,4 +65,41 @@ $(document).ready(function(){
       };
       
       $('.sp_celphones').mask(SPMaskBehavior, spOptions);
+});
+
+/**************Validação do form ************/
+$("#form_contato").validate({
+    rules : {
+        nome:{
+            required: true,
+            minlength:3
+        },
+        telefone:{
+            required: true,
+            minlength: 13
+        },
+        email:{
+            required:true,
+            email: true
+        },
+        mensagem:{
+            required:true
+          }                                
+    },
+    messages:{
+        nome:{
+            required:"Por favor, informe seu nome",
+            minlength:"O nome deve ter pelo menos 3 caracteres"
+        },
+        telefone:{
+            required:"Por favor, informe um telefone para contato",
+            minlength: "Por favor, insira o número de telefone com DDD"
+        },
+        email:{
+            required:"É necessário informar um email válido"
+        },
+        msg:{
+            required:"A mensagem não pode ficar em branco"
+        }     
+    }
 });
