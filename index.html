@@ -290,36 +290,24 @@
             </div>
             <div class="swiper-container" id="slide_container_clientes">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" id="slide_cli_1">
-                        <ul>
-                            <div class="col-md-3">
-                                <li><img class="img-responsive center-block" src="images/sapore.png" alt="Sapore" id="sapore"/>
-                                </li>
-                            </div>
-                            
-                            <div class="col-md-3">
-                                <li><img class="img-responsive center-block" src="images/sodexo.png" alt="Sodexo" id="sodexo"/>
-                                </li>
-                            </div>
-                                    
-                            <div class="col-md-3">
-                                <li><img class="img-responsive center-block" src="images/hosp-santa-paula.png" alt="Hospital Santa Paula" id="hosp-santa-paula"/>
-                                </li>
-                            </div>
-
-                            <div class="col-md-3">
-                                <li><img class="img-responsive center-block" src="images/novelis.png" alt="Novelis" id="novelis"/>
-                                </li>
-                            </div>
-                        </ul>
+                    <div class="swiper-slide" id="slide_cli_1"> 
+                        <img class="img-responsive center-block" src="images/sapore.png" alt="Sapore" id="sapore"/>
+                    </div>    
+                    <div class="swiper-slide" id="slide_cli_2">     
+                        <img class="img-responsive center-block" src="images/sodexo.png" alt="Sodexo" id="sodexo"/>    
+                    </div>
+                    <div class="swiper-slide" id="slide_cli_3">          
+                        <img class="img-responsive center-block" src="images/hosp-santa-paula.png" alt="Hospital Santa Paula" id="hosp-santa-paula"/>
+                    </div>
+                    <div class="swiper-slide" id="slide_cli_4"> 
+                        <img class="img-responsive center-block" src="images/novelis.png" alt="Novelis" id="novelis"/>
                     </div>
                 </div>
                 
                 <div class="swiper-pagination" id="slide_pag_cli"></div>
                 
                 <div class="swiper-button-prev" id="slide_butprev_cli"></div>
-                <div class="swiper-button-next" id="slide_butnext_cli" ></div>
-                
+                <div class="swiper-button-next" id="slide_butnext_cli" ></div>   
             </div>                        
         </section>
         <section class="contato">
@@ -420,7 +408,12 @@
             paginationClickable: true,
             slidesPerView: 3,
             loop: true,
-            direction: 'horizontal'
+            direction: 'horizontal',
+            breakpoints: {
+                767:{
+                    slidesPerView: 1
+                }        
+            }
         });
 
         var bannerClientes = new Swiper ('#slide_container_clientes', {    
@@ -428,7 +421,13 @@
             nextButton: '#slide_butnext_cli',
             prevButton: '#slide_butprev_cli',
             direction: 'horizontal',
-            loop: true
+            loop: true,
+            slidesPerView: 4,
+            breakpoints:{
+                767:{
+                    slidesPerView: 1
+                }
+            }
         });
         </script>
     </body>
