@@ -21,8 +21,15 @@ $(function() {
     });
 });//função para mudar a cor do link ativo
 
-/*****************Enviar email**********************/
+/******************/
 
+$(function fechar_menu() {
+    $('ul.nav li').on('click', function() {
+        $(this).parent().find('div.navbar-collapse.collapse.in').removeClass('in');
+    });
+});//função para mudar a cor do link ativo
+
+/*****************Enviar email**********************/
 $(document).ready(function(){
     $("#form_contato").submit(function(event){
         // Stop form form submitting normally
