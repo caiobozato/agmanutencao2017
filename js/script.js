@@ -23,11 +23,9 @@ $(function() {
 
 /******************/
 
-$(function fechar_menu() {
-    $('ul.nav li').on('click', function() {
-        $(this).parent().find('div.navbar-collapse.collapse.in').removeClass('in');
-    });
-});//função para mudar a cor do link ativo
+function fechar_menu(elemento) {
+    $(this).parent().parent().parent().removeClass('in');
+}//função para fechar após clicar no link
 
 /*****************Enviar email**********************/
 $(document).ready(function(){
