@@ -24,7 +24,8 @@ $(function() {
 /******************/
 
 function fechar_menu(elemento) {
-    $(this).parent().parent().parent().removeClass('in');
+    $('#bs-example-navbar-collapse-1').removeClass('in');
+    console.log('fechar_menu');
 }//função para fechar após clicar no link
 
 /*****************Enviar email**********************/
